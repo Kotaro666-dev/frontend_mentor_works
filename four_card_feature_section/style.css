@@ -25,11 +25,11 @@ body {
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
   background: var(--clr-veryLightGray);
 
-  padding: 0 10vw;
+  padding: 0 10%;
 }
 
 .title {
@@ -47,25 +47,26 @@ body {
 /* ***************************** */
 
 header {
-  width: 80vw;
+  width: 100%;
   padding: 80px 0;
   text-align: center;
+  margin: 0;
 }
 
 .slogan {
   color: var(--clr-grayishBlue);
-  font-size: 3vh;
+  font-size: 1.5rem;
   font-weight: 200;
 }
 
 header .title {
-  font-size: 3vh;
-  margin-top: 1vh;
+  font-size: 1.5rem;
+  margin-top: 0.5em;
 }
 
 header .details {
-  margin-top: 1vh;
-  line-height: 4vh;
+  margin-top: 1rem;
+  line-height: 1.5rem;
 }
 
 /* ***************************** */
@@ -73,14 +74,14 @@ header .details {
 /* ***************************** */
 
 .container {
-  width: 80vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .section {
-  margin-top: 5vh;
+  margin-top: 2em;
   position: relative;
   border: solid 1px transparent;
   box-shadow: 0px 7px 13px -6px rgba(0, 0, 0, 0.63);
@@ -91,19 +92,19 @@ header .details {
 }
 
 .supervisor {
-  border-top: solid 1vh var(--clr-cyan);
+  border-top: solid 0.5em var(--clr-cyan);
 }
 
 .team-builder {
-  border-top: solid 1vh var(--clr-red);
+  border-top: solid 0.5em var(--clr-red);
 }
 
 .karma {
-  border-top: solid 1vh var(--clr-orange);
+  border-top: solid 0.5em var(--clr-orange);
 }
 
 .calculator {
-  border-top: solid 1vh var(--clr-blue);
+  border-top: solid 0.5em var(--clr-blue);
 }
 
 .section .title {
@@ -111,7 +112,7 @@ header .details {
   top: 10%;
   left: 10%;
 
-  font-size: 5vw;
+  font-size: 1.5rem;
 }
 
 .section .details {
@@ -120,11 +121,11 @@ header .details {
   top: 25%;
   left: 10%;
 
-  font-size: 3.5vw;
+  font-size: 1rem;
 }
 
 .section img {
-  width: 15vw;
+  width: 15%;
 
   position: absolute;
   bottom: 15%;
@@ -132,7 +133,7 @@ header .details {
 }
 
 footer {
-  margin-top: 10vh;
+  margin-top: 3rem;
 }
 
 .attribution {
@@ -149,8 +150,8 @@ footer {
 
 @media (min-width: 768px) {
   body {
-    height: 100vh;
-    padding: 0 5vw;
+    height: 100%;
+    padding: 0 5%;
     margin: 0;
   }
 
@@ -158,24 +159,25 @@ footer {
   /*            HEADER             */
   /* ***************************** */
   header {
-    width: 50vw;
-    height: 30vh;
+    width: 80%;
+    height: 30%;
     padding: 30px 0;
     text-align: center;
     margin: 0 auto;
   }
 
   .slogan {
-    font-size: 4vh;
+    font-size: 2rem;
   }
 
   header .title {
-    font-size: 4vh;
+    font-size: 2rem;
+    margin-top: 0.3em;
   }
 
   header .details {
     display: block;
-    width: 40vw;
+    width: 60%;
     margin: 0 auto;
   }
 
@@ -184,8 +186,8 @@ footer {
   /* ***************************** */
 
   .container {
-    width: 85vw;
-    height: 70vh;
+    width: 100%;
+    /* height: 70%; */
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -210,7 +212,7 @@ footer {
   }
 
   .karma {
-    margin-top: 10px;
+    margin-top: 2rem;
   }
 
   .section .title {
@@ -218,20 +220,20 @@ footer {
     top: 10%;
     left: 10%;
 
-    font-size: 2vh;
+    font-size: 1.2rem;
   }
 
   .section .details {
     width: 85%;
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 10%;
 
-    font-size: 1.5vh;
+    font-size: 0.7rem;
   }
 
   .section img {
-    width: 5vh;
+    width: 15%;
 
     position: absolute;
     bottom: 15%;
