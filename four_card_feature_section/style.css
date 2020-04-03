@@ -173,6 +173,12 @@ footer {
     font-size: 4vh;
   }
 
+  header .details {
+    display: block;
+    width: 40vw;
+    margin: 0 auto;
+  }
+
   /* ***************************** */
   /*         CONTAINER             */
   /* ***************************** */
@@ -190,7 +196,7 @@ footer {
 
   .section {
     height: 28vh;
-    width: 25vw;
+    width: 23vw;
     margin: 0 auto;
     background: white;
   }
