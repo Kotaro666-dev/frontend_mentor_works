@@ -21,6 +21,255 @@
 body {
   font-size: 18px;
   font-family: "Bai Jamjuree", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.image img {
+  width: 85%;
+  margin-top: 4em;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.details {
+  font-size: 1rem;
+  color: var(--clr-grayishBlue);
+  padding-top: 1em;
+  line-height: 1.8rem;
+
+  width: 85%;
+  margin: 0 auto;
+}
+
+.message .title {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.break:before {
+  content: "\A";
+  white-space: pre; /* ←あわせてこれを指定しないと改行しない場合があるらしい */
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 10em;
+}
+
+button {
+  width: 80%;
+  height: 3rem;
+  /* border: solid 1px transparent; */
+  border-radius: 5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  transform: scale(0.99);
+}
+
+.download-ios {
+  background: var(--clr-strongCyan);
+  box-shadow: 0px -2px 0px 2px #1f7a6c inset;
+}
+
+.download-ios:active {
+  box-shadow: 0px 0px 0px 0px #1f7a6c inset;
+}
+
+.download-mac {
+  background: var(--clr-lightBlue);
+  box-shadow: 0px -2px 0px 2px #4653bc inset;
+}
+
+.download-mac:active {
+  box-shadow: 0px 0px 0px 0px #4653bc inset;
+}
+
+/* *********************************** */
+/*              HEADER                 */
+/* *********************************** */
+
+header {
+  width: 100%;
+  /* height: 800px; */
+  margin: 0 auto;
+  text-align: center;
+  background-image: url(./images/bg-header-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.logo-header {
+  width: 30%;
+  padding-top: 6em;
+}
+
+header .title {
+  font-size: 2rem;
+  padding-top: 2em;
+}
+
+header .btn {
+  padding-top: 2em;
+}
+
+.upper-section,
+.middle-section,
+.lower-section {
+  margin-top: 8em;
+}
+
+/* *********************************** */
+/*              CONTAINER              */
+/* *********************************** */
+
+.container {
+  width: 95%;
+  text-align: center;
+  margin: 0 auto;
+  /* background: gray; */
+}
+
+/* *********************************** */
+/*              UPPER                  */
+/* *********************************** */
+
+.upper-items .item .title {
+  padding-top: 2.5em;
+}
+
+/* *********************************** */
+/*              MIDDLE                 */
+/* *********************************** */
+
+/* *********************************** */
+/*              LOWER                  */
+/* *********************************** */
+
+.lower-items {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.lower-items .item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 80%;
+  height: 15em;
+  margin-top: 2em;
+  /* background: gray; */
+}
+
+/* *********************************** */
+/*              CUSTOMERS              */
+/* *********************************** */
+
+.customers {
+  height: 500px;
+  position: relative;
+  margin: 5em;
+}
+
+.customers ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 100%;
+}
+
+/* *********************************** */
+/*              FOOTER                 */
+/* *********************************** */
+
+footer {
+  background: var(--clr-grayishBlue);
+  margin-top: 5em;
+  padding-top: 3em;
+  height: 600px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  color: var(--clr-darkGrayishBlue);
+}
+
+.logo-footer {
+  width: 3em;
+}
+
+.links {
+  height: 300px;
+}
+
+.links ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 100%;
+}
+
+.links ul li a:hover {
+  color: var(--clr-strongCyan);
+}
+
+.social-icons ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 200px;
+}
+
+.social-icons ul li a {
+  font-size: 1.7rem;
+}
+
+.social-icons ul li:hover {
+  color: var(--clr-strongCyan);
 }
 
 .attribution {
@@ -29,4 +278,11 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 786px) {
+  .break:before {
+    content: "";
+    white-space: pre; /* ←あわせてこれを指定しないと改行しない場合があるらしい */
+  }
 }
