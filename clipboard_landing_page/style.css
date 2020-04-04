@@ -59,7 +59,7 @@ a {
 
 .break:before {
   content: "\A";
-  white-space: pre; /* ←あわせてこれを指定しないと改行しない場合があるらしい */
+  white-space: pre;
 }
 
 .btn {
@@ -73,7 +73,6 @@ a {
 button {
   width: 80%;
   height: 3rem;
-  /* border: solid 1px transparent; */
   border-radius: 5rem;
   color: white;
   font-size: 1rem;
@@ -112,7 +111,6 @@ button:hover {
 
 header {
   width: 100%;
-  /* height: 800px; */
   margin: 0 auto;
   text-align: center;
   background-image: url(./images/bg-header-mobile.png);
@@ -192,7 +190,6 @@ header .btn {
   width: 80%;
   height: 15em;
   margin-top: 2em;
-  /* background: gray; */
 }
 
 /* *********************************** */
@@ -236,10 +233,6 @@ footer {
   color: var(--clr-darkGrayishBlue);
 }
 
-footer a:visited {
-  color: var(--clr-darkGrayishBlue);
-}
-
 .logo-footer {
   width: 3em;
 }
@@ -258,6 +251,10 @@ footer a:visited {
   height: 100%;
 }
 
+.links ul li a {
+  color: var(--clr-darkGrayishBlue);
+}
+
 .links ul li a:hover {
   color: var(--clr-strongCyan);
 }
@@ -272,11 +269,15 @@ footer a:visited {
   width: 200px;
 }
 
-.social-icons ul li a {
+.social-icons ul li {
   font-size: 1.7rem;
 }
 
-.social-icons ul li:hover {
+.fab {
+  color: var(--clr-darkGrayishBlue);
+}
+
+.fab:hover {
   color: var(--clr-strongCyan);
 }
 
@@ -299,7 +300,7 @@ footer a:visited {
 @media (min-width: 786px) {
   .break:before {
     content: "";
-    white-space: pre; /* ←あわせてこれを指定しないと改行しない場合があるらしい */
+    white-space: pre;
   }
 
   .message .title {
