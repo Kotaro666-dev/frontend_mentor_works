@@ -1,87 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./index.js"></script>
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+  </head>
+  <body>
+    <!-- ********* -->
+    <!-- HEADER -->
+    <!-- ********* -->
+    <header id="header">
+      <div class="upper-or-left">
+        <div class="title">
+          Social Media Dashboard
+        </div>
+        <div class="total-followers-number">
+          Total Followers: 23,004
+        </div>
+      </div>
+      <hr class="liner-mobile" />
+      <div class="lower-or-right">
+        <div class="mode-name">Dark Mode</div>
+        <!-- <button class="mode-btn" id="modeBtn"><span>test</span></button> -->
+        <div class="switch">
+          <label class="switch__label">
+            <input type="checkbox" class="switch__input" id="toggleBtn" />
+            <span class="switch__content"></span>
+            <span class="switch__circle"></span>
+          </label>
+        </div>
+      </div>
+    </header>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- ********* -->
+    <!-- CONTAINER -->
+    <!-- ********* -->
+    <div class="container">
+      <!-- *************** -->
+      <!-- TOTAL FOLLOWERS -->
+      <!-- *************** -->
+      <div class="total-followers">
+        <div class="item-total facebook">
+          <div class="id facebook">@nathanf</div>
+          <div class="followers-number followers">1987</div>
+          <div class="updown-number up">12 Today</div>
+        </div>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+        <div class="item-total twitter">
+          <div class="id twitter">@nathanf</div>
+          <div class="followers-number followers">1044</div>
+          <div class="updown-number up">99 Today</div>
+        </div>
 
-  Dark Mode
+        <div class="item-total instagram">
+          <div class="id instagram">@realnathanf</div>
+          <div class="followers-number followers">11k</div>
+          <div class="updown-number up">1099 Today</div>
+        </div>
 
-  
+        <div class="item-total youtube">
+          <div class="id youtube">Nathan F.</div>
+          <div class="followers-number subscribers">8239</div>
+          <div class="updown-number down">144 Today</div>
+        </div>
+      </div>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+      <!-- ************** -->
+      <!-- OVERVIEW-TODAY -->
+      <!-- ************** -->
+      <div class="overview-today">
+        <div class="title">
+          Overview - Today
+        </div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+        <div class="item-today">
+          <div class="title-type">Page Views</div>
+          <div class="icon-sns">
+            <img src="./images/icon-facebook.svg" alt="icon facebook" />
+          </div>
+          <div class="followers-number">87</div>
+          <div class="updown-number up">3%</div>
+        </div>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+        <div class="item-today">
+          <div class="title-type">Likes</div>
+          <div class="icon-sns">
+            <img src="./images/icon-facebook.svg" alt="icon facebook" />
+          </div>
+          <div class="followers-number">52</div>
+          <div class="updown-number down">2%</div>
+        </div>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+        <div class="item-today">
+          <div class="title-type">Likes</div>
+          <div class="icon-sns">
+            <img src="./images/icon-instagram.svg" alt="icon instagram" />
+          </div>
+          <div class="followers-number">5462</div>
+          <div class="updown-number up">2257%</div>
+        </div>
 
+        <div class="item-today">
+          <div class="title-type">Profile Views</div>
+          <div class="icon-sns">
+            <img src="./images/icon-instagram.svg" alt="icon instagram" />
+          </div>
+          <div class="followers-number">52k</div>
+          <div class="updown-number up">1375%</div>
+        </div>
 
+        <div class="item-today">
+          <div class="title-type">Retweets</div>
+          <div class="icon-sns">
+            <img src="./images/icon-twitter.svg" alt="icon twitter" />
+          </div>
+          <div class="followers-number">117</div>
+          <div class="updown-number up">303%</div>
+        </div>
 
-  Overview - Today
+        <div class="item-today">
+          <div class="title-type">Likes</div>
+          <div class="icon-sns">
+            <img src="./images/icon-twitter.svg" alt="icon twitter" />
+          </div>
+          <div class="followers-number">507</div>
+          <div class="updown-number up">553%</div>
+        </div>
 
-  Page Views
-  87
-  3%
+        <div class="item-today">
+          <div class="title-type">Likes</div>
+          <div class="icon-sns">
+            <img src="./images/icon-youtube.svg" alt="icon youtube" />
+          </div>
+          <div class="followers-number">107</div>
+          <div class="updown-number down">19%</div>
+        </div>
 
-  Likes
-  52
-  2%
+        <div class="item-today">
+          <div class="title-type">Total Views</div>
+          <div class="icon-sns">
+            <img src="./images/icon-youtube.svg" alt="icon youtube" />
+          </div>
+          <div class="followers-number">1407</div>
+          <div class="updown-number down">12%</div>
+        </div>
+      </div>
+    </div>
 
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://twitter.com/Kotaro6661" target="_blank">Kotaro</a>.
+      </div>
+    </footer>
+  </body>
 </html>
