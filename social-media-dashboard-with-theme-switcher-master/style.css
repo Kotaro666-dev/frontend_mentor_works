@@ -466,6 +466,10 @@ footer {
 /* **************************************** */
 
 @media (min-width: 768px) {
+  header {
+    height: 130px;
+  }
+
   header .upper-or-left,
   header .liner-mobile,
   header .lower-or-right {
