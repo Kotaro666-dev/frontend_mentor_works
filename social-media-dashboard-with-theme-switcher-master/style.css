@@ -151,6 +151,7 @@ REFERENCE: https://sterfield.co.jp/programmer/%E3%83%87%E3%83%90%E3%82%A4%E3%82%
   width: 5em;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 .switch__content {
   display: block;
