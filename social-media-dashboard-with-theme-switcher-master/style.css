@@ -514,12 +514,28 @@ footer {
 
     padding: 1em 0;
     margin-bottom: 3em;
+    /* margin-left: 1em; */
+  }
+
+  .item-total:nth-child(2) {
     margin-left: 1em;
+    margin-right: 0.5em;
+  }
+
+  .item-total:nth-child(3) {
+    margin-left: 0.5em;
+    margin-right: 1em;
   }
 
   .item-total .followers-number {
     font-size: 3rem;
     position: relative;
+  }
+
+  .item-total.instagram {
+    border-top: solid 0.3em #c13584;
+    border-top-right-radius: 10px;
+    border-image: none;
   }
 
   .overview-today {
