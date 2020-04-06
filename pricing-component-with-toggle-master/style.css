@@ -27,6 +27,315 @@
 body {
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
+  background: var(--clr-veryLightGrayishBlue);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* **************************************** */
+/* ************     HEADER **************** */
+/* **************************************** */
+
+header {
+  position: relative;
+  height: 200px;
+  width: 90%;
+  margin: 20% 5% 5%;
+  text-align: center;
+}
+
+header img {
+  display: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  transform: translateX(-20%) translateY(-40%);
+  /* object-fit: cover; */
+  z-index: 0;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--clr-grayishBlue);
+}
+
+/* SWITCH */
+
+.switch {
+  margin-top: 2em;
+}
+
+.switch::before {
+  content: "Annually";
+  color: var(--clr-lightGrayishBlue);
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 1.5em;
+  margin-right: 1em;
+}
+
+.switch::after {
+  content: "Monthly";
+  color: var(--clr-lightGrayishBlue);
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 1.5em;
+  margin-left: 1em;
+}
+
+.switch__label {
+  width: 4em;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.switch__content {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  border-radius: 30px;
+  height: 31px;
+  overflow: hidden;
+}
+.switch__content:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: calc(100% - 3px);
+  height: calc(100% - 3px);
+  top: 0;
+  left: 0;
+  border: 1.5px solid #e5e5ea;
+  border-radius: 30px;
+  background: var(--clr-primary);
+}
+.switch__content:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: transparent;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  border-radius: 30px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.switch__input {
+  display: none;
+}
+
+.switch__circle {
+  display: block;
+  top: 3px;
+  right: 0.3em;
+  position: absolute;
+  -webkit-box-shadow: 0 2px 6px #999;
+  box-shadow: 0 2px 6px #999;
+  width: 24px;
+  height: 24px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.switch__input:checked ~ .switch__circle {
+  right: 2.2em;
+}
+
+.switch__input:checked ~ .switch__content:after {
+  background: var(--clr-primary);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* **************************************** */
+/* **********  CONTAINER   **************** */
+/* **************************************** */
+
+.container {
+  width: 90%;
+  margin: 1em auto;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  height: 480px;
+  background: green;
+  margin-bottom: 2em;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+
+  border: solid 0.1px none;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.card:nth-child(odd) {
+  color: var(--clr-grayishBlue);
+  background: white;
+}
+
+.card:nth-child(odd) .price {
+  color: var(--clr-darkGrayishBlue);
+  font-size: 5rem;
+}
+
+.card:nth-child(odd) .price::before {
+  content: "$";
+  font-size: 3rem;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.3em;
+  margin-right: 0.2em;
+}
+
+.card:nth-child(even) {
+  color: white;
+  background: var(--clr-primary);
+}
+
+.card .contract {
+  font-size: 1.5rem;
+  padding-top: 1em;
+}
+
+.card:nth-child(even) .price {
+  font-size: 5rem;
+}
+
+.card:nth-child(even) .price::before {
+  content: "$";
+  font-size: 3rem;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0.3em;
+  margin-right: 0.2em;
+}
+
+.storage,
+.users,
+.sendup {
+  width: 80%;
+}
+
+.storage::before,
+.users::before,
+.sendup::before {
+  white-space: pre;
+  content: "";
+  display: inline-block;
+  background: var(--clr-lightGrayishBlue);
+  height: 1px;
+  width: 100%;
+
+  position: relative;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  margin-bottom: 1em;
+}
+
+.sendup::after {
+  content: "";
+  display: inline-block;
+  background: var(--clr-lightGrayishBlue);
+  height: 1px;
+  width: 100%;
+
+  position: relative;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  margin-top: 1em;
+}
+
+button {
+  width: 80%;
+  height: 3rem;
+  border: solid 1px none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+
+.card:nth-child(odd) button {
+  background: var(--clr-primary);
+  color: white;
+}
+
+.card:nth-child(even) button {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+
+button:focus {
+  outline: none;
+}
+
+.card:nth-child(odd) button:hover {
+  background: white;
+  border: solid 1px var(--clr-grayishBlue);
+  color: hsl(237, 63%, 64%);
+}
+
+.card:nth-child(odd) button:active {
+  transform: scale(0.99);
+  background: var(--clr-primary);
+  color: white;
+}
+
+.card:nth-child(even) button:hover {
+  background: var(--clr-primary);
+  border: solid 1px white;
+  color: white;
+}
+
+.card:nth-child(even) button:active {
+  transform: scale(0.99);
+  background: white;
+  color: hsl(237, 63%, 64%);
 }
 
 /* **************************************** */
