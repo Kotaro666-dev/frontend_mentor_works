@@ -28,6 +28,7 @@ body {
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
   background: var(--clr-veryLightGrayishBlue);
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -35,6 +36,26 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
+}
+
+.bg-top {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 40%;
+  max-width: 100%;
+  height: auto;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.bg-bottom {
+  display: none;
 }
 
 /* **************************************** */
@@ -49,29 +70,12 @@ header {
   text-align: center;
 }
 
-header img {
-  display: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  max-width: 100%;
-  height: auto;
-
-  position: absolute;
-  top: 60%;
-  left: 80%;
-  transform: translateX(-20%) translateY(-40%);
-  /* object-fit: cover; */
-  z-index: 0;
-}
-
 .title {
   font-size: 2rem;
   color: var(--clr-grayishBlue);
 }
 
 /* SWITCH */
-
 .switch {
   margin-top: 2em;
 }
@@ -82,6 +86,7 @@ header img {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  font-size: 1.1rem;
   margin-bottom: 1.5em;
   margin-right: 1em;
 }
@@ -92,6 +97,7 @@ header img {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  font-size: 1.1rem;
   margin-bottom: 1.5em;
   margin-left: 1em;
 }
@@ -107,7 +113,7 @@ header img {
   cursor: pointer;
   position: relative;
   border-radius: 30px;
-  height: 31px;
+  height: 33px;
   overflow: hidden;
 }
 .switch__content:before {
@@ -118,7 +124,7 @@ header img {
   height: calc(100% - 3px);
   top: 0;
   left: 0;
-  border: 1.5px solid #e5e5ea;
+  border: 1px solid none;
   border-radius: 30px;
   background: var(--clr-primary);
 }
@@ -126,7 +132,7 @@ header img {
   content: "";
   display: block;
   position: absolute;
-  background: transparent;
+  background-color: transparent;
   width: 0;
   height: 0;
   top: 50%;
@@ -144,13 +150,13 @@ header img {
 
 .switch__circle {
   display: block;
-  top: 3px;
-  right: 0.3em;
+  top: 2px;
+  left: 2px;
   position: absolute;
   -webkit-box-shadow: 0 2px 6px #999;
   box-shadow: 0 2px 6px #999;
-  width: 24px;
-  height: 24px;
+  width: 27px;
+  height: 27px;
   -webkit-border-radius: 20px;
   border-radius: 20px;
   background-color: #fff;
@@ -161,11 +167,11 @@ header img {
   transition: all 0.5s;
 }
 .switch__input:checked ~ .switch__circle {
-  right: 2.2em;
+  left: 2.1em;
 }
 
 .switch__input:checked ~ .switch__content:after {
-  background: var(--clr-primary);
+  background: hsl(236, 72%, 79%);
   top: 0;
   left: 0;
   width: 100%;
@@ -190,8 +196,8 @@ header img {
 .card {
   width: 100%;
   height: 480px;
-  background: green;
   margin-bottom: 2em;
+  padding: 3% 0;
 
   display: flex;
   flex-direction: column;
@@ -205,6 +211,10 @@ header img {
   z-index: 10;
 }
 
+.card .price {
+  font-size: 5rem;
+}
+
 .card:nth-child(odd) {
   color: var(--clr-grayishBlue);
   background: white;
@@ -212,13 +222,12 @@ header img {
 
 .card:nth-child(odd) .price {
   color: var(--clr-darkGrayishBlue);
-  font-size: 5rem;
 }
 
 .card:nth-child(odd) .price::before {
   content: "$";
   font-size: 3rem;
-  position: relative;
+  /* position: relative; */
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 0.3em;
@@ -235,14 +244,10 @@ header img {
   padding-top: 1em;
 }
 
-.card:nth-child(even) .price {
-  font-size: 5rem;
-}
-
 .card:nth-child(even) .price::before {
   content: "$";
   font-size: 3rem;
-  position: relative;
+  /* position: relative; */
   display: inline-block;
   vertical-align: middle;
   margin-bottom: 0.3em;
@@ -349,4 +354,139 @@ button:focus {
 .attribution a {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
+}
+
+/* **************************************** */
+/* ***********    TABLET   **************** */
+/* **************************************** */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    position: relative;
+    height: 100px;
+    width: 90%;
+    margin: 10% 5% 5%;
+    text-align: center;
+  }
+
+  .container {
+    width: 60%;
+    margin: 1em auto;
+  }
+
+  .card {
+    font-size: 1.2rem;
+  }
+
+  .card .contract {
+    font-size: 1.8rem;
+    padding-top: 1em;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+}
+
+/* **************************************** */
+/* *********      LAPTOP   **************** */
+/* **************************************** */
+
+@media (min-width: 1024px) {
+  header {
+    position: relative;
+    /* height: 150px; */
+    height: 20%;
+    width: 100%;
+    margin: 5% 5% 2%;
+    text-align: center;
+  }
+
+  .bg-top {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+  .bg-bottom {
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 30%;
+    max-width: 100%;
+    height: auto;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  /* **************************************** */
+  /* ************     HEADER **************** */
+  /* **************************************** */
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .switch {
+    margin-top: 3em;
+  }
+
+  /* **************************************** */
+  /* **********  CONTAINER   **************** */
+  /* **************************************** */
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+    height: 70%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    height: 450px;
+    margin-bottom: 0;
+    padding: 3% 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    border: solid 0.1px none;
+    border-radius: 5px;
+    z-index: 10;
+  }
+
+  .card:nth-child(2) {
+    height: 500px;
+    box-shadow: 0px 18px 48px -19px #696fdd;
+  }
+
+  .card .price {
+    font-size: 4rem;
+  }
+
+  .attribution {
+    margin-top: 5em;
+  }
 }
