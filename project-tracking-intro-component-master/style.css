@@ -1,20 +1,39 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    /* Primary */
-    --clr-violet: black
+  /* Primary */
+  --clr-red: hsl(0, 100%, 68%);
+
+  /* Neutral */
+  --clr-veryDarkBlue: hsl(230, 29%, 20%);
+  --clr-darkGrayishBlue: hsl(230, 11%, 40%);
+  --clr-grayishBlue: hsl(231, 7%, 65%);
+  --clr-lightgrayishBlue: hsl(207, 33%, 95%);
 }
 
 /* **************************************** */
 /* *******       GENERAL   **************** */
 /* **************************************** */
 
+body {
+  font-size: 18px;
+  font-family: "Barlow", sans-serif;
+}
+
 /* **************************************** */
 /* *******       HEADER    **************** */
+/* **************************************** */
+
+nav {
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+/* **************************************** */
+/* ***************    MAIN   ************** */
 /* **************************************** */
 
 /* **************************************** */
@@ -22,10 +41,10 @@
 /* **************************************** */
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
+  font-size: 11px;
+  text-align: center;
+}
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
