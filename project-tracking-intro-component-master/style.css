@@ -26,6 +26,7 @@ body {
   /* height: 100vh; */
 
   position: relative;
+  overflow-x: hidden;
 }
 
 .bg_picture img {
@@ -37,7 +38,6 @@ body {
   top: 15%;
   left: 0%;
   z-index: 100;
-  overflow: hidden;
 }
 
 .bg-color {
