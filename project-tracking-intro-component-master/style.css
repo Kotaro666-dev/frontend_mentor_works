@@ -22,23 +22,250 @@
 body {
   font-size: 18px;
   font-family: "Barlow", sans-serif;
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+}
+
+.bg_picture img {
+  /* width: 150%; */
+  width: 600px;
+  display: block;
+
+  position: absolute;
+  top: 15%;
+  left: 0%;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.bg-color {
+  width: 50vw;
+  height: 55vh;
+  background: var(--clr-lightgrayishBlue);
+
+  border: solid 1px transparent;
+  border-bottom-left-radius: 3rem;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: 0;
 }
 
 /* **************************************** */
 /* *******       HEADER    **************** */
 /* **************************************** */
 
-nav {
+header {
+  width: 100vw;
+  height: 60vh;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+
+  padding: 0 10%;
+}
+
+.logo,
+.hamburger {
+  padding-top: 2em;
+}
+
+.icon-logo {
+  width: 1.5rem;
+}
+
+.hamburger {
+  position: relative;
+  z-index: 10;
+}
+
+.icon-hamburger {
+  width: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.icon-close {
+  width: 1.5rem;
+  cursor: pointer;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* HAMBURGER MENU */
+
+.nav {
   font-family: "Barlow Condensed", sans-serif;
+  /* display: none; */
+  /* visibility: hidden; */
+  z-index: 1000;
+
+  width: 80vw;
+  height: 200px;
+  background: white;
+  border: solid 1px transparent;
+  border-radius: 3px;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.31);
+
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.nav ul {
+  height: 100%;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav ul li {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--clr-veryDarkBlue);
+  letter-spacing: 0.1rem;
+}
+
+.nav ul li:last-child a {
+  color: var(--clr-grayishBlue);
+}
+
+.nav_desktop {
+  display: none;
 }
 
 /* **************************************** */
 /* ***************    MAIN   ************** */
 /* **************************************** */
 
+main {
+  height: 40vh;
+  /* margin-top: 50vh; */
+  padding: 0 10%;
+}
+
+.subtitle {
+  font-size: 1rem;
+}
+
+.new {
+  font-family: "Barlow Condensed", sans-serif;
+  width: 100%;
+  background: var(--clr-veryDarkBlue);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  padding: 0.3em 0.6em;
+  margin-right: 1em;
+  border: solid 1px transparent;
+  border-radius: 1rem;
+}
+
+.mono {
+  color: var(--clr-grayishBlue);
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: "Barlow Condensed", sans-serif;
+  margin-top: 0.7em;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--clr-veryDarkBlue);
+
+  line-height: 1em;
+}
+
+.details {
+  font-size: 1.1rem;
+  margin-top: 0.7em;
+  color: var(--clr-grayishBlue);
+}
+
+.btn-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 1em;
+}
+
+button {
+  width: 50%;
+  height: 4em;
+  background: var(--clr-red);
+
+  border: solid 1px transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+button span {
+  color: white;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+
+  letter-spacing: 0.05rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  transform: scale(0.99);
+}
+
+.preview {
+  color: var(--clr-grayishBlue);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
 /* **************************************** */
 /* *******       FOOTER    **************** */
 /* **************************************** */
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
 
 .attribution {
   font-size: 11px;
@@ -47,4 +274,126 @@ nav {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  /* **************************************** */
+  /* *******       GENERAL   **************** */
+  /* **************************************** */
+  .bg_picture img {
+    width: 70%;
+    top: 20%;
+    left: 50%;
+  }
+
+  /* **************************************** */
+  /* *******       HEADER    **************** */
+  /* **************************************** */
+
+  header {
+    height: 40vh;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .icon-logo {
+    width: 2.5rem;
+  }
+
+  .logo {
+    padding-top: 3em;
+  }
+
+  .nav_desktop {
+    font-family: "Barlow Condensed", sans-serif;
+    display: block;
+    width: 40vw;
+    z-index: 1000;
+  }
+
+  .nav_desktop ul {
+    height: 100%;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .nav_desktop ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--clr-veryDarkBlue);
+    letter-spacing: 0.1rem;
+  }
+
+  .nav_desktop ul li:last-child a,
+  .dot {
+    color: var(--clr-grayishBlue);
+  }
+
+  .nav_desktop ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* **************************************** */
+  /* ***************    MAIN   ************** */
+  /* **************************************** */
+
+  main {
+    height: 60vh;
+    padding: 0 50% 0 10%;
+  }
+
+  .mono {
+    color: var(--clr-grayishBlue);
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+  }
+
+  .title {
+    margin-top: 0.4em;
+    font-size: 4rem;
+  }
+
+  .details {
+    margin-top: 2em;
+  }
+
+  .btn-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+
+    margin-top: 3em;
+  }
+
+  button {
+    width: 30%;
+    height: 5em;
+    margin-right: 2em;
+  }
+
+  button span {
+    font-size: 1rem;
+  }
+
+  .preview {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+  }
 }

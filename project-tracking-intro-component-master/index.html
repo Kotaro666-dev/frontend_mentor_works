@@ -28,15 +28,30 @@
     <div class="bg_picture">
       <img src="./images/illustration-devices.svg" alt="illustration-devices">
     </div>
+    <div class="bg-color"></div>
     <header>
       <div class="logo">
-        <img src="./images/logo.svg" alt="logo" />
+        <img class="icon-logo" src="./images/logo.svg" alt="logo" />
       </div>
-      <div class="nav">
+      <div class="hamburger">
+        <img class="icon-hamburger" id="hamburger" src="./images/icon-hamburger.svg" alt="icon hamburger">
+        <img class="icon-close" id="close" src="./images/icon-close.svg" alt="icon close">
+      </div>
+      <div class="nav" id="nav">
         <ul>
           <li><a href="#">Product</a></li>
           <li><a href="#">Features</a></li>
-          <li><a href="#">Prices</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><hr></li>
+          <li><a href="#">Login</a></<li>
+        </ul>
+      </div>
+      <div class="nav_desktop">
+        <ul>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li class="dot">・</li>
           <li><a href="#">Login</a></<li>
         </ul>
       </div>
@@ -44,13 +59,13 @@
 
     <main>
       <div class="subtitle">
-        <div class="new">New</div>Monograph Dashboard
+        <span class="new">New</span> <span class="mono">Monograph Dashboard</span>
       </div>
       <div class="title">Powerful insights into your team</div>
-      <div class="details">Project planning and time tracking for agile teams</div>
+      <div class="details">Project planning and time tracking<br>for agile teams</div>
       <div class="btn-section">
         <button><span>schedule a demo</span></button>
-        <span>to see a preview</span>
+        <span class="preview">to see a preview</span>
       </div>
     </main>
 
