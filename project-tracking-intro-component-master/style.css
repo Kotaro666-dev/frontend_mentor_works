@@ -23,14 +23,14 @@ body {
   font-size: 18px;
   font-family: "Barlow", sans-serif;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
 
   position: relative;
 }
 
 .bg_picture img {
   /* width: 150%; */
-  width: 600px;
+  width: 500px;
   display: block;
 
   position: absolute;
@@ -162,7 +162,7 @@ header {
 /* **************************************** */
 
 main {
-  height: 40vh;
+  /* height: 40vh; */
   /* margin-top: 50vh; */
   padding: 0 10%;
 }
@@ -264,7 +264,7 @@ button:active {
 footer {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -10%;
 }
 
 .attribution {
@@ -401,6 +401,11 @@ footer {
   /* *******       FOOTER    **************** */
   /* **************************************** */
 
+  footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
   .attribution {
     font-size: 1rem;
     /* text-align: center; */
