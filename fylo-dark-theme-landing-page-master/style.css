@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+  --clr-darkBlue_intro_signupBG: hsl(217, 28%, 15%);
+  --clr-darkBlue_mainBG: hsl(218, 28%, 13%);
+  --clr-darkBlue_footerBG: hsl(216, 53%, 9%);
+  --clr-darkBlue_testimonialBG: hsl(219, 30%, 18%);
+
+  /* ACCENT */
+  --clr-cyan: hsl(176, 68%, 64%);
+  --clr-blue: hsl(198, 60%, 50%);
+
+  /* Neutral */
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+/* **************************************** */
+/* ********   GENERAL      **************** */
+/* **************************************** */
+
+body {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  font-family: "Raleway", sans-serif;
+}
+
+/* **************************************** */
+/* ********   FOOTER       **************** */
+/* **************************************** */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
