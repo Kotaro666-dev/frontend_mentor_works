@@ -192,9 +192,9 @@ header .nav ul {
   background: var(--clr-darkBlue_mainBG);
   z-index: 0;
   position: absolute;
-  top: 70%;
+  top: 72%;
   left: 0px;
-  transform: translateY(-30%);
+  transform: translateY(-28%);
 }
 
 /* **************************************** */
@@ -298,7 +298,7 @@ header .nav ul {
   content: url(./images/bg-quotes.png);
   display: block;
   position: absolute;
-  left: 10%;
+  left: 8%;
   top: -4%;
   z-index: -1;
 }
@@ -431,6 +431,7 @@ footer {
 
 .footer_logo {
   padding-left: 1em;
+  margin-bottom: 2em;
 }
 
 .information {
@@ -452,6 +453,8 @@ footer {
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-start;
+
+  margin-bottom: 1em;
 }
 
 .information ul li img {
