@@ -65,7 +65,7 @@ main {
 }
 
 .container {
-  /* width: 320px; */
+  position: relative;
   width: 90%;
   height: 300px;
   background: white;
@@ -77,9 +77,24 @@ main {
 
   border: solid 1px transparent;
   border-radius: 0.5rem;
-  border-left: solid 5px var(--clr-desaturatedDarkCyan);
+  /* border-left: solid 5px var(--clr-desaturatedDarkCyan); */
 
-  padding: 0 2em 2em;
+  padding: 2em 2em 2em;
+  margin-bottom: 4em;
+}
+
+.add_border_left {
+  border-left: solid 5px var(--clr-desaturatedDarkCyan);
+}
+
+.company_logo {
+  position: absolute;
+  top: -10%;
+  left: 5%;
+}
+
+.company_logo img {
+  width: 50px;
 }
 
 .first_row {
@@ -106,7 +121,7 @@ main {
 }
 
 .new {
-  width: 4em;
+  display: inline-block;
   height: 2em;
   background: var(--clr-desaturatedDarkCyan);
   color: white;
@@ -118,11 +133,13 @@ main {
   justify-content: center;
   align-items: center;
 
+  padding: 1.2em;
   margin-right: 1em;
 }
 
 .featured {
-  width: 6em;
+  display: inline-block;
+  /* width: 6em; */
   height: 2em;
   background: black;
   color: white;
@@ -133,13 +150,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  padding: 1.2em;
 }
 
 .second_row {
   width: 100%;
 }
 
-.job_title {
+.position {
   font-size: 1rem;
   font-weight: 700;
 }
@@ -175,7 +194,8 @@ main {
 
 .role,
 .level,
-.lang {
+.lang,
+.tools {
   display: inline-block;
   height: 2em;
   background: var(--clr-lightGrayishCyanBackground);
