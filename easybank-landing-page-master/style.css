@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* PRIMARY */
+  --clr-darkBlue: hsl(233, 26%, 24%);
+  --clr-limeGreen: hsl(136, 65%, 51%);
+  --clr-brightCyan: hsl(192, 70%, 51%);
+
+  /* NEUTRAL */
+  --clr-grayishBlue: hsl(233, 8%, 62%);
+  --clr-lightGrayishBlue: hsl(220, 16%, 96%);
+  --clr-veryLightGray: hsl(0, 0%, 98%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+/* **************************************** */
+/* ********     GENERAL    **************** */
+/* **************************************** */
+
+body {
+  font-size: 18px;
+  font-family: "Public Sans", sans-serif;
+  font-size: 300;
+}
+
+/* **************************************** */
+/* ********     HEADER    **************** */
+/* **************************************** */
+
+/* **************************************** */
+/* ********     FOOTER     **************** */
+/* **************************************** */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
