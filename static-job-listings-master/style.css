@@ -66,7 +66,7 @@ main {
 
 .container {
   position: relative;
-  width: 90%;
+  width: 350px;
   height: 300px;
   background: white;
 
@@ -77,7 +77,7 @@ main {
 
   border: solid 1px transparent;
   border-radius: 0.5rem;
-  /* border-left: solid 5px var(--clr-desaturatedDarkCyan); */
+  box-shadow: 0px 8px 7px -6px #cecece;
 
   padding: 2em 2em 2em;
   margin-bottom: 4em;
@@ -95,6 +95,16 @@ main {
 
 .company_logo img {
   width: 50px;
+}
+
+.desktop_first_row {
+  height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .first_row {
@@ -166,7 +176,7 @@ main {
 .third_row {
   width: 100%;
 
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -228,6 +238,46 @@ main {
   color: hsl(228, 45%, 44%);
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* **************************************** */
+  /* ********   MAIN         **************** */
+  /* **************************************** */
+
+  .container {
+    width: 500px;
+    height: 400px;
+
+    padding: 5em 2em 2em;
+    margin-bottom: 8em;
+  }
+
+  .company_logo img {
+    width: 100px;
+  }
+
+  .desktop_first_row {
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1em 0;
+  }
+
+  .role,
+  .level,
+  .lang,
+  .tools {
+    height: 3em;
+    font-size: 0.9rem;
+
+    padding: 1em;
+  }
+}
+
 @media (min-width: 1025px) {
   /* **************************************** */
   /* ********   GENERAL      **************** */
@@ -238,5 +288,101 @@ main {
 
   .header_mobile {
     display: none;
+  }
+
+  /* **************************************** */
+  /* ********   HEADER       **************** */
+  /* **************************************** */
+
+  .header_desktop {
+    width: 100%;
+  }
+
+  /* **************************************** */
+  /* ********   MAIN         **************** */
+  /* **************************************** */
+
+  .container {
+    width: 90%;
+    height: 200px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    padding: 2em 2em 2em 15em;
+    margin-bottom: 4em;
+  }
+
+  .company_logo {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+  }
+
+  .company_logo img {
+    width: 100px;
+  }
+
+  .desktop_first_row {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .first_row {
+    width: 100%;
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .first_row span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .company_name {
+    font-size: 1rem;
+    padding-right: 2em;
+  }
+
+  .position {
+    font-size: 1.2rem;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .fourth_row {
+    width: 600px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .role,
+  .level,
+  .lang,
+  .tools {
+    height: 3em;
+    font-size: 0.9rem;
+
+    padding: 1em;
   }
 }

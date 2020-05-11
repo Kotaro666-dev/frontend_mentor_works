@@ -23,6 +23,7 @@ loadJSON(function(json) {
       json[i]["logo"] +
       '" alt="company\'s logo">' +
       "</div>";
+    out += '<div class="desktop_first_row">';
     //  FIRST ROW
     out += '<div class="first_row">';
     out += '<div class="company_name">' + json[i]["company"] + "</div>";
@@ -31,7 +32,6 @@ loadJSON(function(json) {
     }
     if (json[i]["featured"]) {
       out += '<div class="featured"><span>Featured</span></div>';
-      // document.getElementById(id).classsList.add("add_border_left");
     }
     out += "</div>";
     //  SECOND ROW
@@ -45,6 +45,7 @@ loadJSON(function(json) {
     out += '<div class="contract">' + json[i]["contract"] + "</div>";
     out += '<div class="circle"></div>';
     out += '<div class="location">' + json[i]["location"] + "</div>";
+    out += "</div>";
     out += "</div>";
     out += "<hr />";
     //  FOURTH ROW
