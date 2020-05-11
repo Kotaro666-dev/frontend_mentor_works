@@ -173,6 +173,15 @@ main {
   font-weight: 700;
 }
 
+.position a {
+  color: black;
+  text-decoration: none;
+}
+
+.position a:hover {
+  color: var(--clr-desaturatedDarkCyan);
+}
+
 .third_row {
   width: 100%;
 
@@ -224,6 +233,22 @@ main {
   border-radius: 0.2rem;
   margin-bottom: 1em;
   margin-right: 1em;
+  cursor: pointer;
+}
+
+.role:hover,
+.level:hover,
+.lang:hover,
+.tools:hover {
+  background: var(--clr-desaturatedDarkCyan);
+  color: white;
+}
+
+.role:active,
+.level:active,
+.lang:active,
+.tools:active {
+  transform: scale(0.99);
 }
 
 /* **************************************** */

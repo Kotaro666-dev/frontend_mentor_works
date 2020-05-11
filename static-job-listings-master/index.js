@@ -36,7 +36,8 @@ loadJSON(function(json) {
     out += "</div>";
     //  SECOND ROW
     out += '<div class="second_row">';
-    out += '<div class="position">' + json[i]["position"] + "</div>";
+    out +=
+      '<div class="position"><a href="#">' + json[i]["position"] + "</a></div>";
     out += "</div>";
     //  THIRD ROW
     out += '<div class="third_row">';
