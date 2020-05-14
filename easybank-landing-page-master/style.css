@@ -58,6 +58,7 @@ ul {
 }
 
 a {
+  color: inherit;
   text-decoration: none;
   cursor: pointer;
 }
@@ -425,12 +426,23 @@ footer .nav li:hover {
   color: var(--clr-limeGreen);
 }
 
+.wrapper-right {
+  height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .copyright {
   color: var(--clr-grayishBlue);
   font-size: 1rem;
 }
 
 .attribution {
+  width: 100%;
   color: var(--clr-white);
   font-size: 11px;
   text-align: center;
