@@ -130,9 +130,9 @@ body {
   width: 100%;
 
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 50%;
-  transform: translateX(-50%) translateY(-10%);
+  transform: translateX(-50%) translateY(-15%);
 }
 
 .attribution {
@@ -140,10 +140,11 @@ body {
   font-size: 11px;
   text-align: center;
   position: absolute;
-  top: 99%;
+  top: 97%;
   left: 50%;
-  transform: translateX(-50%) translateY(-1%);
+  transform: translateX(-50%) translateY(-3%);
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
