@@ -57,7 +57,7 @@ ul {
   list-style: none;
 }
 
-ul li a {
+a {
   text-decoration: none;
   cursor: pointer;
 }
@@ -74,6 +74,8 @@ button {
     rgba(49, 211, 92, 1) 0%,
     rgba(80, 183, 218, 1) 100%
   );
+  filter: brightness(1.1);
+  color: var(--clr-white);
 
   border: solid 1px transparent;
   border-radius: 5em;
@@ -81,7 +83,7 @@ button {
 }
 
 button:hover {
-  /*  */
+  filter: brightness(1.3);
 }
 
 button:active {
@@ -89,7 +91,6 @@ button:active {
 }
 
 button span {
-  color: var(--clr-white);
   font-weight: 400;
   font-size: 0.8rem;
 }
@@ -127,6 +128,35 @@ header {
   cursor: pointer;
 }
 
+.cross {
+  display: none;
+  cursor: pointer;
+}
+
+header .btn {
+  display: none;
+}
+
+.bg-boxshadow {
+  display: none;
+  width: 100%;
+  height: 800px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(147, 147, 147, 1) 100%
+  );
+  opacity: 0.7;
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 10;
+}
+
 header .nav {
   display: none;
   width: 80%;
@@ -134,7 +164,6 @@ header .nav {
   background: var(--clr-white);
   border: solid 1px transparent;
   border-radius: 10px;
-  box-shadow: 0px 48px 50px 50px #666666;
 
   position: absolute;
   top: 120%;
@@ -155,8 +184,8 @@ header .nav ul {
   align-items: center;
 }
 
-.visibility_on {
-  visibility: visible;
+header .nav li:hover {
+  text-decoration: underline;
 }
 
 /* **************************************** */
@@ -326,6 +355,10 @@ main {
   font-size: 0.8rem;
 }
 
+.title a:hover {
+  color: var(--clr-limeGreen);
+}
+
 .latest_articles img {
   width: 100%;
   border-top-left-radius: 10px;
@@ -347,10 +380,6 @@ footer {
   flex-wrap: nowrap;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.footer_logo img {
-  width: 100%;
 }
 
 footer a {
@@ -413,4 +442,463 @@ footer .nav li:hover {
 }
 .attribution a {
   color: var(--clr-white);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* **************************************** */
+  /* ********     GENERAL    **************** */
+  /* **************************************** */
+
+  button {
+    width: 30em;
+    height: 7em;
+  }
+
+  button span {
+    font-size: 1.8rem;
+  }
+
+  /* **************************************** */
+  /* ********      HEADER    **************** */
+  /* **************************************** */
+  header {
+    width: 100%;
+    height: 100px;
+    background: var(--clr-white);
+
+    padding: 0 4em;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+  }
+
+  .header_logo img {
+    width: 200px;
+  }
+
+  .hamburger img,
+  .cross img {
+    width: 150%;
+  }
+
+  header .nav {
+    height: 500px;
+
+    position: absolute;
+    top: 150%;
+
+    font-size: 2rem;
+  }
+
+  .bg-boxshadow {
+    height: 1000px;
+  }
+
+  /* **************************************** */
+  /* **   INTRODUCITON_IMAGE    ************* */
+  /* **************************************** */
+  .introduction_image {
+    padding-top: 45em;
+  }
+
+  .smartphones {
+    position: absolute;
+    top: -10%;
+  }
+
+  /* **************************************** */
+  /* **   INTRODUCITON-EXP      ************* */
+  /* **************************************** */
+  .introduction_exp .title {
+    font-size: 5rem;
+  }
+
+  .introduction_exp .details {
+    font-size: 2rem;
+    line-height: 1.8em;
+    padding-top: 2em;
+  }
+
+  .introduction_exp .btn {
+    padding-bottom: 5em;
+  }
+
+  /* **************************************** */
+  /* ********     WHY        **************** */
+  /* **************************************** */
+  .why_choose_easybank {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+  .why_choose_easybank .intro .title {
+    font-size: 4rem;
+    padding: 0 2em;
+  }
+
+  .why_choose_easybank .intro .details {
+    font-size: 2rem;
+  }
+
+  .container {
+    height: 400px;
+    margin-bottom: 2em;
+  }
+
+  .container .title {
+    font-size: 3rem;
+  }
+
+  .container .details {
+    font-size: 2rem;
+  }
+
+  /* **************************************** */
+  /* ********     ARTICLES   **************** */
+  /* **************************************** */
+
+  .latest_articles {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+  .big_title {
+    font-size: 4rem;
+    margin-bottom: 2em;
+  }
+
+  .article {
+    width: 100%;
+    height: 850px;
+    margin-bottom: 2em;
+
+    background: var(--clr-white);
+    border: solid 1px transparent;
+    border-radius: 10px;
+  }
+
+  .contents {
+    padding: 2em 4em;
+  }
+
+  .author {
+    font-size: 1.2rem;
+  }
+
+  .contents .title {
+    font-size: 2rem;
+  }
+
+  .contents .details {
+    font-size: 1.2rem;
+  }
+
+  /* **************************************** */
+  /* ********     FOOTER     **************** */
+  /* **************************************** */
+  footer {
+    height: 800px;
+  }
+
+  .social_icons {
+    width: 80%;
+  }
+
+  .social_icons li a {
+    font-size: 50px;
+  }
+
+  footer .nav ul {
+    height: 300px;
+    font-size: 1.8rem;
+  }
+
+  .wrapper-right {
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .copyright {
+    font-size: 1.8rem;
+  }
+
+  .attribution {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  /* **************************************** */
+  /* ********     GENERAL    **************** */
+  /* **************************************** */
+
+  .bg_intro_mobile {
+    display: none;
+  }
+
+  .bg_intro_desktop {
+    display: block;
+  }
+
+  .introduction_exp,
+  .why_choose_easybank,
+  .latest_articles {
+    padding: 0 8em;
+  }
+
+  /* **************************************** */
+  /* ********     HEADER    ****************  */
+  /* **************************************** */
+
+  header {
+    height: 80px;
+    position: relative;
+    padding: 0 8em;
+    z-index: 1000;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  header .btn {
+    display: block;
+  }
+
+  header .nav {
+    display: block;
+    width: 400px;
+    height: 100%;
+    background: none;
+    border: none;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 100;
+  }
+
+  header .nav ul {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  header .nav li {
+    font-size: 0.9rem;
+    color: var(--clr-grayishBlue);
+    height: 100%;
+    padding-top: 30px;
+  }
+
+  header .nav li:hover {
+    color: var(--clr-darkBlue);
+    text-decoration: none;
+    border-bottom: solid 5px var(--clr-limeGreen);
+  }
+
+  /* **************************************** */
+  /* **   INTRODUCITON_IMAGE    ************* */
+  /* **************************************** */
+
+  .introduction_image {
+    padding-top: 10em;
+    height: 100%;
+  }
+  .bg_intro_desktop {
+    width: 1000px;
+    position: absolute;
+    top: -10%;
+    right: -20%;
+    z-index: 0;
+  }
+
+  .smartphones {
+    width: 700px;
+    z-index: 10;
+
+    position: absolute;
+    top: -10%;
+    right: -10%;
+  }
+
+  /* **************************************** */
+  /* **   INTRODUCITON-EXP      ************* */
+  /* **************************************** */
+
+  .introduction_exp {
+    width: 100%;
+    text-align: left;
+    padding-left: 8em;
+  }
+
+  .introduction_exp .title {
+    font-size: 3rem;
+    padding-right: 15em;
+  }
+
+  .introduction_exp .details {
+    font-size: 1.2rem;
+    line-height: 1.8em;
+    padding-top: 2em;
+    padding-right: 35em;
+  }
+
+  .introduction_exp .btn {
+    padding-bottom: 5em;
+  }
+
+  /* **************************************** */
+  /* ********     WHY        **************** */
+  /* **************************************** */
+
+  .why_choose_easybank {
+    width: 100%;
+    background: var(--clr-lightGrayishBlue);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: left;
+
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+  .why_choose_easybank .intro .title {
+    font-size: 2.5rem;
+  }
+
+  .why_choose_easybank .intro .details {
+    font-size: 1.2rem;
+    padding-right: 32em;
+  }
+
+  .container {
+    height: 300px;
+    width: 20%;
+    margin-bottom: 2em;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+
+  /* **************************************** */
+  /* ********     ARTICLES   **************** */
+  /* **************************************** */
+  .latest_articles {
+    width: 100%;
+    height: 800px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    text-align: left;
+
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+  .big_title {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 0em;
+  }
+
+  .article {
+    width: 22%;
+    height: 400px;
+    margin-bottom: 0em;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    background: var(--clr-white);
+    border: solid 1px transparent;
+    border-radius: 10px;
+  }
+
+  .latest_articles img {
+    height: 200px;
+  }
+
+  .contents .details {
+    font-size: 0.8rem;
+  }
+
+  /* **************************************** */
+  /* ********     FOOTER     **************** */
+  /* **************************************** */
+  footer {
+    padding: 2em 5em;
+    height: 200px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .social_icons {
+    width: 20%;
+    height: 80%;
+  }
+
+  footer .nav {
+    width: 40%;
+  }
+
+  footer .nav ul {
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    font-size: 1rem;
+  }
+
+  footer .nav li {
+    margin-bottom: 0.5em;
+  }
+
+  .wrapper-right {
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .copyright {
+    font-size: 0.9rem;
+  }
 }
