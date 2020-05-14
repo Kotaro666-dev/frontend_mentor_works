@@ -83,13 +83,11 @@ body {
 }
 
 .slider img:hover {
-  background: red;
-  border: solid 1px transparent;
-  border-radius: 100px;
+  transform: scale(1.2);
 }
 
 .slider img:active {
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 .quotes_pattern {
