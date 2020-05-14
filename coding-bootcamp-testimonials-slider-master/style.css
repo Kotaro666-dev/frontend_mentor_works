@@ -30,17 +30,18 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .bg_pattern {
   width: 300px;
-  z-index: 0;
 
   position: absolute;
   top: 30%;
   left: 50%;
   transform: translateX(-50%) translateY(-70%);
-  z-index: 10;
+  z-index: 0;
 }
 
 .image_tanja,
@@ -149,4 +150,87 @@ body {
 
 .toggle {
   display: none;
+}
+
+@media (min-width: 1025px) {
+  .bg_pattern {
+    width: 700px;
+
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translateX(-35%) translateY(-50%);
+  }
+
+  .image_tanja,
+  .image_john {
+    width: 550px;
+
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translateX(-35%) translateY(-50%);
+  }
+
+  .slider {
+    position: absolute;
+    top: 82%;
+    left: 60%;
+    transform: translateX(-40%) translateY(-18%);
+  }
+
+  .quotes_pattern {
+    width: 100px;
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    transform: translateX(-75%) translateY(-65%);
+  }
+
+  .quotes {
+    width: 650px;
+    text-align: left;
+    font-size: 1rem;
+    padding: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateX(-60%) translateY(-50%);
+    z-index: 1000;
+  }
+
+  .details {
+    font-size: 2rem;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .name {
+    margin-right: 1rem;
+  }
+
+  .curve_pattern {
+    width: 50%;
+
+    position: absolute;
+    top: 85%;
+    left: 0%;
+    transform: translateY(-15%);
+  }
+
+  .attribution {
+    font-size: 1rem;
+    text-align: center;
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-3%);
+  }
 }
