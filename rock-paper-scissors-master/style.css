@@ -33,9 +33,316 @@ body {
   width: 100vw;
   height: 100vh;
   background: var(--clr-background);
+  padding: 5% 10% 10%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* **************************************** */
+/* ********   INTRODUCTION  *************** */
+/* **************************************** */
+
+.introduction {
+  width: 100%;
+  height: 120px;
+  border: solid 5px var(--clr-headerOutline);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 1em;
+}
+
+.logo {
+  width: 100px;
+}
+
+.score_board {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: solid 1px black;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.score_title {
+  color: var(--clr-darkText);
+}
+
+.score_points {
+  font-size: 3rem;
+  color: var(--clr-darkText);
+}
+
+/* **************************************** */
+/* ********   GAME FIELD   **************** */
+/* **************************************** */
+
+.triangle {
+  width: 200px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-55%);
+}
+
+.outer-circle {
+  width: 130px;
+  height: 130px;
+  border: solid 1px black;
+  border-radius: 100px;
+  box-shadow: 0px 0px 0px 1px #000000;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 0;
+}
+
+.inner-circle {
+  width: 100px;
+  height: 100px;
+  border: solid 1px transparent;
+  border-radius: 100px;
+  box-shadow: 0px 13px 7px -5px #8f8f8f inset;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+  background: white;
+  z-index: 10;
+}
+
+#paper,
+#scissors,
+#rock {
+  cursor: pointer;
+  z-index: 100;
+}
+
+.paper {
+  background: var(--clr-paperGradient);
+  box-shadow: 0px -17px 3px -8px #3e56b0 inset;
+
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  transform: translateX(-70%) translateY(-65%);
+}
+
+.scissors {
+  background: var(--clr-scissorsGradient);
+  box-shadow: 0px -17px 3px -8px #b08704 inset;
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  transform: translateX(-30%) translateY(-65%);
+}
+
+.rock {
+  background: var(--clr-rockGradient);
+  box-shadow: 0px -17px 3px -8px #972f42 inset;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.paper:active,
+.scissors:active,
+.rock:active {
+  box-shadow: 0px 0px 0px 0px transparent inset;
+}
+
+.house_field_mark {
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  transform: translateX(-30%) translateY(-65%);
+
+  width: 110px;
+  height: 110px;
+  background: hsl(237, 49%, 15%);
+  opacity: 0.3;
+  border: solid 1px transparent;
+  border-radius: 100px;
+}
+
+.player_field {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  transform: translateX(-70%) translateY(-65%);
+}
+
+.house_field {
+  position: absolute;
+  top: 35%;
+  left: 70%;
+  transform: translateX(-30%) translateY(-65%);
+}
+
+.you_picked,
+.the_house_picked {
+  color: white;
+  visibility: hidden;
+  display: inline-block;
+  letter-spacing: 0.1em;
+}
+
+.you_picked {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translateX(-75%) translateY(-55%);
+}
+
+.the_house_picked {
+  width: 150px;
+  position: absolute;
+  top: 45%;
+  left: 70%;
+  transform: translateX(-30%) translateY(-55%);
+}
+
+.result {
+  visibility: hidden;
+  display: inline-block;
+  color: white;
+  font-size: 4rem;
+  width: 100%;
+  text-align: center;
+
+  padding-top: 2em;
+}
+
+.play_again {
+  visibility: hidden;
+}
+
+#playAgainBtn {
+  background: white;
+  border: solid 2px white;
+  border-radius: 10px;
+  width: 250px;
+  height: 60px;
+  text-align: center;
+}
+
+#playAgainBtn:active {
+  transform: scale(0.99);
+}
+
+.play_again span {
+  color: var(--clr-background);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+/* **************************************** */
+/* ********        RULE    **************** */
+/* **************************************** */
+
+#ruleBtn {
+  background: transparent;
+  border: solid 2px white;
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+}
+
+#ruleBtn:active {
+  transform: scale(0.99);
+}
+
+.rule span {
+  color: white;
+  font-size: 1rem;
+}
+
+/* **************************************** */
+/* ********   RULE BOOK    **************** */
+/* **************************************** */
+
+.rule_book {
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 30% 0 20%;
+  z-index: 1000;
+}
+
+.rule_book .title {
+  font-size: 2rem;
+  color: var(--clr-darkText);
+}
+
+#close {
+  cursor: pointer;
+}
+
+#close:active {
+  transform: scale(0.9);
+}
+
+/* **************************************** */
+/* ********   JAVASCRIPT   **************** */
+/* **************************************** */
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .attribution {
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-2%);
   font-size: 11px;
   text-align: center;
 }

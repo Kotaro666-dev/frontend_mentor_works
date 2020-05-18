@@ -15,37 +15,59 @@
     <script defer src="script.js"></script>
 
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+    <!-- Score Rules You Picked The House Picked You Win You Lose Play Again -->
+  </head>
+  <body>
     <div class="introduction">
-      <div class="title">
-        <img src="./images/logo.svg" alt="title logo" />
+      <div class="title_logo">
+        <img class="logo" src="./images/logo.svg" alt="title logo" />
       </div>
       <div class="score_board">
         <div class="score_title">SCORE</div>
-        <div class="score_points">12</div>
+        <div class="score_points" id="scorePoints">0</div>
       </div>
     </div>
     <div class="game_field">
-      <img src="./images/bg-triangle.svg" alt="bg-triangle" />
+      <img
+        class="triangle"
+        src="./images/bg-triangle.svg"
+        alt="bg-triangle"
+        id="triangle"
+      />
       <div class="starter">
-        <div class="paper"></div>
-        <div class="scissors"></div>
-        <div class="rock"></div>
+        <div class="outer-circle paper" id="paper">
+          <div class="inner-circle">
+            <img src="./images/icon-paper.svg" alt="icon paper" />
+          </div>
+        </div>
+        <div class="outer-circle scissors" id="scissors">
+          <div class="inner-circle">
+            <img src="./images/icon-scissors.svg" alt="icon scissors" />
+          </div>
+        </div>
+        <div class="outer-circle rock" id="rock">
+          <div class="inner-circle">
+            <img src="./images/icon-rock.svg" alt="icon rock" />
+          </div>
+        </div>
       </div>
+      <div class="you_picked" id="youPicked">YOU PICKED</div>
+      <div class="the_house_picked" id="housePicked">THE HOUSE PICKED</div>
+      <div class="house_field_mark"></div>
     </div>
     <div class="result" id="result">YOU WIN</div>
-    <div class="play_again" id="playAgain">
-      <button><span>PLAY AGAIN</span></button>
+    <div class="play_again">
+      <button id="playAgainBtn"><span>PLAY AGAIN</span></button>
     </div>
     <div class="rule">
-      <button><span>RULE</span></button>
+      <button id="ruleBtn"><span>RULES</span></button>
     </div>
-    <div class="rule_book">
-      <div class="title">RULE</div>
+    <div class="rule_book" id="ruleBook">
+      <div class="title">RULES</div>
       <img src="./images/image-rules.svg" alt="image of rules" />
+      <img src="./images/icon-close.svg" alt="close" id="closeBtn" />
     </div>
-    Score Rules You Picked The House Picked You Win You Lose Play Again
-  </head>
-  <body>
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
