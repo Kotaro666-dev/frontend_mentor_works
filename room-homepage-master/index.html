@@ -1,60 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Room homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="site_title">room</div>
+    <img
+      class="hamburger"
+      id="hamburger"
+      src="./images/icon-hamburger.svg"
+      alt="hamburger"
+    />
+    <img class="close" id="close" src="./images/icon-close.svg" alt="close" />
+    <ul class="nav" id="nav">
+      <li>Home</li>
+      <li>Shop</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    <!-- HEADER END -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- FIRST SECTION -->
+    <div class="upper_section-desktop">
+      <div class="first_image_section">
+        <img class="hero_image" id="heroImage" src="" alt="image" />
+        <div class="angle_section">
+          <div class="angle_container" id="angleLeft">
+            <img src="./images/icon-angle-left.svg" alt="icon_angle_left" />
+          </div>
+          <div class="angle_container" id="angleRight">
+            <img src="./images/icon-angle-right.svg" alt="icon_angle_right	" />
+          </div>
+        </div>
+      </div>
+      <div class="desc_section">
+        <div class="title" id="heroTitle"></div>
+        <div class="details" id="heroDetails"></div>
+        <div class="shop_now">
+          <span>SHOP NOW</span>
+          <img src="./images/icon-arrow.svg" alt="arrow" />
+        </div>
+      </div>
+    </div>
+    <!-- FIRST SECTION END-->
 
-  <title>Frontend Mentor | Room homepage</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="index.js"></script>
-</head>
-<body>
-  <header>
-    <div class="menu">
-      <ul>
-          <li>Home</li>
-          <li>Shop</li>
-          <li>About</li>
-          <li>Contact</li>
-      </ul>
-  </header>
+    <!-- SECOND SECTION -->
+    <div class="lower_section-desktop">
+      <img
+        class="second_image"
+        src="./images/image-about-dark.jpg"
+        alt="image about dark"
+      />
+      <div class="about_section">
+        <div class="title">About our furniture</div>
+        <div class="details">
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </div>
+      </div>
+      <!-- SECOND SECTION END-->
 
-  Discover innovative ways to decorate
-
-  We provide unmatched quality, comfort, and style for property owners across the country.
-  Our experts combine form andnfunction in bringing your vision to life. Create a room in your
-  own style with our collection and make your property a reflection of you and what you love.
-
-  Shop now
-
-  We are available all across the globe
-
-  With stores all over the world, it's easy for you to find furniture for your home or place of business.
-  Locally, we’re in most major cities throughout the country. Find the branch nearest you using our
-  store locator. Any questions? Don't hesitate to contact us today.
-
-  Shop now
-
-  Manufactured with the best materials
-
-  Our modern furniture store provide a high level of quality. Our company has invested in advanced technology
-  to ensure that every product is made as perfect and as consistent as possible. With three decades of
-  experience in this industry, we understand what customers want for their home and office.
-
-  Shop now
-
-  About our furniture
-
-  Our multifunctional collection blends design and function to suit your individual taste.
-  Make each room unique, or pick a cohesive theme that best express your interests and what
-  inspires you. Find the furniture pieces you need, from traditional to contemporary styles
-  or anything in between. Product specialists are available to help you create your dream space.
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <!-- THIRD SECTION -->
+      <img
+        class="third_image"
+        src="./images/image-about-light.jpg"
+        alt="image about light"
+      />
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">kotaro</a>.
+    </div>
+  </body>
 </html>
