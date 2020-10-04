@@ -88,7 +88,7 @@ function updateHeroData() {
   } else if (index == -1) {
     index = 2;
   }
-  console.log(index);
+  // console.log(index);
   heroImage.src = data[index]["image"];
   heroTitle.innerHTML = data[index]["title"];
   heroDetails.innerHTML = data[index]["details"];
