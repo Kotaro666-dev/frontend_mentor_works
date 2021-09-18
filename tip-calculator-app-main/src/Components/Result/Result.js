@@ -35,7 +35,7 @@ const Result = (props) => {
 	return (
 		<Wrapper className={classes.wrapper}>
 			<Card className={classes.card}>
-				<div>
+				<div className={classes.amount_field}>
 					<div className={classes.section}>
 						<div className={classes.title}>Tips Amount</div>
 						<div className={classes.number}>${tipAmount}</div>
