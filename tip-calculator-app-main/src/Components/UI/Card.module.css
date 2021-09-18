@@ -1,4 +1,5 @@
 .card {
 	background: white;
 	border-radius: 10px;
+	display: flex;
 }
