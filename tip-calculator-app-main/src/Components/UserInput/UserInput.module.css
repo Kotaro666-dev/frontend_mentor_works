@@ -17,14 +17,17 @@
 	font: inherit;
 	display: block;
 	width: 100%;
-	border: 1px solid #ccc;
-	padding: 0.15rem;
+	background: var(--lighter-grayish-cyan);
+	border: 1px solid transparent;
+	border-radius: 5px;
+	padding: 0.3rem;
 	margin-bottom: 0.5rem;
+	text-align: right;
 }
 
 .input input:focus {
 	outline: none;
-	border-color: #4f005f;
+	border: 1px solid var(--primary-color-strong-cyan);
 }
 
 .card {

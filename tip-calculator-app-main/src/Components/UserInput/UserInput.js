@@ -69,7 +69,7 @@ const UserInput = (props) => {
 	return(
 		<form onSubmit={addUserInput} className={classes.input}>
 			<label>Bill</label>
-			<input id="bill" type="text" onChange={onChangeBill} value={bill} className={classes.input}/>
+			<input id="bill" placeholder='0.00' type="text" onChange={onChangeBill} value={bill} className={classes.input}/>
 			<label>Select Tip %</label>
 			<Card className={classes.card}>
 				{
