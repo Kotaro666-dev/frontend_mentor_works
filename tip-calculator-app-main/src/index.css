@@ -1,7 +1,15 @@
-body {
-	margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+	box-sizing: border-box;
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+html {
+	font-family: 'Space Mono';
+
+	background:white;
+}
+
+body {
+	margin: 0;
 }
