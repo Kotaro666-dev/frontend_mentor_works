@@ -13,6 +13,12 @@ const Result = (props) => {
 		return (Math.floor(number * 100) / 100)
 	}
 
+	const onClickButton = () => {
+		props.onClickResetButton();
+		setTipAmount(0);
+		setTotalAmount(0);
+	}
+
 	useEffect(()=>{
 		const newTipAmount = props.userInput.bill * props.userInput.tip;
 		const newTipPerPerson = newTipAmount / props.userInput.people;
@@ -39,7 +45,7 @@ const Result = (props) => {
 						<div className={classes.number}>${totalAmount}</div>
 					</div>
 				</div>
-				<Button className={classes.button}>RESET</Button>
+				<Button className={classes.button} onClick={onClickButton}>RESET</Button>
 			</Card>
 		</Wrapper>
 	);

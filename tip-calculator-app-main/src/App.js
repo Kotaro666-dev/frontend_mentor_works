@@ -7,17 +7,23 @@ import Card from './Components/UI/Card';
 
 function App() {
 	const [userInput, setUserInput] = useState({bill: 0, tip: 0, people: 0});
+	const [shouldResetField, setShouldResetField] = useState(false);
 
 	const setUserInputHandler = (bill, tip, people) => {
 		setUserInput({bill: bill, tip: tip, people: people});
+	}
+
+	const onClickResetButton = () => {
+		setUserInput({bill: 0, tip: 0, people: 0});
+		setShouldResetField(true);
 	}
 
 	return (
 		<Wrapper>
 			<Title />
 			<Card>
-				<UserInput setUserInput={setUserInputHandler}/>
-				<ResultClass userInput={userInput}/>
+				<UserInput setUserInput={setUserInputHandler} shouldResetField={shouldResetField}/>
+				<ResultClass userInput={userInput} onClickResetButton={onClickResetButton}/>
 			</Card>
 		</Wrapper>
 	);

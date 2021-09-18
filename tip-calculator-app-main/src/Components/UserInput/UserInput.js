@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import classes from './UserInput.module.css';
 import Card from "../UI/Card";
@@ -18,6 +18,17 @@ const UserInput = (props) => {
 	const [people, setPeople] = useState('1');
 	const [tips, setTips] = useState(tipsSelection);
 	const [tip, setTip] = useState(null);
+
+	useEffect(()=>{
+		if (!props.shouldResetField) {
+			return;
+		}
+		// reset field;
+		setBill('');
+		setPeople('1');
+		setTips(tipsSelection);
+		setTip(null);
+	})
 
 	const onChangeBill = (event) => {
 		setBill(event.target.value);
@@ -39,13 +50,6 @@ const UserInput = (props) => {
 		setPeople(event.target.value);
 	}
 
-	const resetField = () => {
-		setBill('');
-		setTips(tipsSelection);
-		setTip(null);
-		setPeople('1');
-	}
-
 	const addUserInput = (event) => {
 		event.preventDefault();
 
@@ -61,9 +65,7 @@ const UserInput = (props) => {
 			console.log('people empty');
 			return ;
 		}
-
 		props.setUserInput(+bill, tip, +people);
-		resetField();
 	}
 
 	return(
