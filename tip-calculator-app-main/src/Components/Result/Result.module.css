@@ -1,4 +1,42 @@
+@import '../../constants.css';
+
 .wrapper {
 	width: 100%;
-	background-color: red;
+}
+
+.card {
+	margin: 1rem auto;
+	padding: 1rem;
+	width: 90%;
+	height: 80%;
+	background-color: var(--very-dark-cyan);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.section {
+	display: flex;
+	justify-content: space-between;
+}
+
+.title {
+	color: white;
+	font-size: 0.5rem;
+}
+
+.number {
+	color: var(--cyan-color);
+	font-size: 2rem;
+}
+
+.button {
+	background-color: var(--cyan-color);
+	color: var(--very-dark-cyan);
+}
+
+.button:hover,
+.button:active {
+	background: var(--very-dark-cyan);
+	color: var(--darker-grayish-cyan);
 }

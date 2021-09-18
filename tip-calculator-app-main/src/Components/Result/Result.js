@@ -1,5 +1,7 @@
 import React, {useState, useEffect }from "react";
 import Wrapper from "../Helper/Wrapper";
+import Card from "../UI/Card";
+import Button from "../UI/Button";
 
 import classes from './Result.module.css';
 
@@ -26,8 +28,19 @@ const Result = (props) => {
 
 	return (
 		<Wrapper className={classes.wrapper}>
-			<div>${tipAmount}</div>
-			<div>${totalAmount}</div>
+			<Card className={classes.card}>
+				<div>
+					<div className={classes.section}>
+						<div className={classes.title}>Tips Amount</div>
+						<div className={classes.number}>${tipAmount}</div>
+					</div>
+					<div className={classes.section}>
+						<div className={classes.title}>Total Amount</div>
+						<div className={classes.number}>${totalAmount}</div>
+					</div>
+				</div>
+				<Button className={classes.button}>RESET</Button>
+			</Card>
 		</Wrapper>
 	);
 }

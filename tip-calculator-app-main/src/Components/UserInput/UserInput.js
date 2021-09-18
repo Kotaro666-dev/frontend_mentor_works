@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import classes from './UserInput.module.css';
 import Card from "../UI/Card";
+import Button from "../UI/Button";
 
 const tipsSelection = [
 	{id: '5%', percent: '5%', number: 0.05, isSelected: false},
@@ -81,7 +82,7 @@ const UserInput = (props) => {
 			</Card>
 			<label>Number of People</label>
 			<input id="numberOfPeople" type="text" onChange={onChangePeople} value={people} className={classes.input} />
-			<button type="submit">Go</button>
+			<Button type="submit" className={classes.button}>Go</Button>
 		</form>
 	);
 }

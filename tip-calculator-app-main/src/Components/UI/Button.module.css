@@ -1,0 +1,16 @@
+@import '../../constants.css';
+
+.button {
+	font: inherit;
+	font-weight: 700;
+	letter-spacing: .2rem;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	height: 2rem;
+	padding: 0.25rem 1rem;
+	cursor: pointer;
+}
+
+.button:focus {
+	outline: none;
+}

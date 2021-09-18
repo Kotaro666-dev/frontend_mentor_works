@@ -1,11 +1,10 @@
 import React from "react";
-import Wrapper from "../Helper/Wrapper";
+
+import classes from './Button.module.css';
 
 const Button = (props) => {
 	return (
-		<Wrapper>
-			Button
-		</Wrapper>
+		<button type={props.type || 'button'} className={`${classes.button} ${props.className}`}>{props.children}</button>
 	);
 }
 

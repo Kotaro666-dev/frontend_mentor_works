@@ -39,9 +39,21 @@
 	background-color: var(--very-dark-cyan);
 	margin: 5px;
 	border-radius: 5px;
+	cursor: pointer;
 }
 
 .tip_card_selected {
 	color: var(--very-dark-cyan);
 	background-color: var(--light-grayish-cyan);
+}
+
+.button {
+	background-color: var(--cyan-color);
+	color: var(--very-dark-cyan);
+}
+
+.button:hover,
+.button:active {
+	background: var(--very-dark-cyan);
+	color: var(--dark-grayish-cyan);
 }
