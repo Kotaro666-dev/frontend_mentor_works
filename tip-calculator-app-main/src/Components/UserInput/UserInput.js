@@ -4,34 +4,34 @@ import classes from './UserInput.module.css';
 import Card from "../UI/Card";
 
 const tipsSelection = [
-	{id: '5%', percent: '5%', isSelected: false},
-	{id: '10%', percent: '10%', isSelected: false},
-	{id: '15%', percent: '15%', isSelected: false},
-	{id: '25%', percent: '25%', isSelected: false},
-	{id: '50%', percent: '50%', isSelected: false},
-	{id: 'Custom', percent: 'Custom', isSelected: false},
+	{id: '5%', percent: '5%', number: 0.05, isSelected: false},
+	{id: '10%', percent: '10%', number: 0.10, isSelected: false},
+	{id: '15%', percent: '15%', number: 0.15, isSelected: false},
+	{id: '25%', percent: '25%', number: 0.25, isSelected: false},
+	{id: '50%', percent: '50%', number: 0.50, isSelected: false},
+	{id: 'Custom', percent: 'Custom', number: 1, isSelected: false},
 ];
 
 const UserInput = (props) => {
 	const [bill, setBill] = useState('');
 	const [people, setPeople] = useState('1');
 	const [tips, setTips] = useState(tipsSelection);
-	const [tip, setTip] = useState('');
+	const [tip, setTip] = useState(null);
 
 	const onChangeBill = (event) => {
 		setBill(event.target.value);
 	}
 
-	const onSelectTip = (id) => {
+	const onSelectTip = (target) => {
 		setTips((prevTips) => {
 			const newTips = prevTips.map((tip) =>
-				tip.id === id
-				? {id: tip.id, percent: tip.percent, isSelected: true}
-				: {id: tip.id, percent: tip.percent, isSelected: false}
+				tip.id === target.id
+				? {id: tip.id, percent: tip.percent, number: tip.number, isSelected: true}
+				: {id: tip.id, percent: tip.percent, number: tip.number, isSelected: false}
 			);
 			return (newTips);
 		});
-		setTip(id);
+		setTip(target.number);
 	}
 
 	const onChangePeople = (event) => {
@@ -41,7 +41,7 @@ const UserInput = (props) => {
 	const resetField = () => {
 		setBill('');
 		setTips(tipsSelection);
-		setTip('');
+		setTip(null);
 		setPeople('1');
 	}
 
@@ -52,7 +52,7 @@ const UserInput = (props) => {
 			console.log('bill empty');
 			return ;
 		}
-		if (tip.trim().length === 0) {
+		if (tip === null) {
 			console.log('tip is not selected');
 			return ;
 		}
@@ -61,7 +61,7 @@ const UserInput = (props) => {
 			return ;
 		}
 
-		props.setUserInput(bill, tip, people);
+		props.setUserInput(+bill, tip, +people);
 		resetField();
 	}
 
@@ -73,7 +73,7 @@ const UserInput = (props) => {
 			<Card className={classes.card}>
 				{
 					tips.map((tip) => (
-						<option key={tip.id} className={`${classes.tip_card} ${tip.isSelected && classes.tip_card_selected}`} onClick={() => onSelectTip(tip.id)}>
+						<option key={tip.id} className={`${classes.tip_card} ${tip.isSelected && classes.tip_card_selected}`} onClick={() => onSelectTip(tip)}>
 							{tip.percent}
 						</option>
 					))
