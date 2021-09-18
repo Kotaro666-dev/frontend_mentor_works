@@ -13,19 +13,27 @@ const tipsSelection = [
 	{id: 'Custom', percent: 'Custom', number: 1, isSelected: false},
 ];
 
+const errorMessage = [
+	{id: 'bill', message: null},
+	{id: 'tip', message: null},
+	{id: 'people', message: null},
+]
+
 const UserInput = (props) => {
 	const [bill, setBill] = useState('');
-	const [people, setPeople] = useState('1');
+	const [people, setPeople] = useState('');
 	const [tips, setTips] = useState(tipsSelection);
 	const [tip, setTip] = useState(null);
+
+	const [error, setError] = useState(errorMessage);
+
 
 	useEffect(()=>{
 		if (!props.shouldResetField) {
 			return;
 		}
-		// reset field;
 		setBill('');
-		setPeople('1');
+		setPeople('');
 		setTips(tipsSelection);
 		setTip(null);
 	})
@@ -54,15 +62,36 @@ const UserInput = (props) => {
 		event.preventDefault();
 
 		if (bill.trim().length === 0) {
-			console.log('bill empty');
+			setError((prevState) => {
+				const newState = prevState.map((item) =>
+						item.id === 'bill'
+						? {id: item.id, message: 'Enter some bill.'}
+						: {id: item.id, message: null}
+				);
+				return (newState);
+			});
 			return ;
 		}
 		if (tip === null) {
-			console.log('tip is not selected');
+			setError((prevState) => {
+				const newState = prevState.map((item) =>
+						item.id === 'tip'
+						? {id: item.id, message: 'Select a tip.'}
+						: {id: item.id, message: null}
+				);
+				return (newState);
+			});
 			return ;
 		}
 		if (people.trim().length === 0) {
-			console.log('people empty');
+			setError((prevState) => {
+				const newState = prevState.map((item) =>
+						item.id === 'people'
+						? {id: item.id, message: 'Enter a number of people.'}
+						: {id: item.id, message: null}
+				);
+				return (newState);
+			});
 			return ;
 		}
 		props.setUserInput(+bill, tip, +people);
@@ -70,9 +99,15 @@ const UserInput = (props) => {
 
 	return(
 		<form onSubmit={addUserInput} className={classes.input}>
-			<label>Bill</label>
-			<input id="bill" placeholder='0.00' type="text" onChange={onChangeBill} value={bill} className={classes.input}/>
-			<label>Select Tip %</label>
+			<div className={classes.label_field}>
+				<label>Bill</label>
+				{error[0].message && <p className={classes.error_message}>{error[0].message}</p>}
+			</div>
+				<input id="bill" placeholder='0.00' type="text" onChange={onChangeBill} value={bill} className={classes.input}/>
+			<div className={classes.label_field}>
+				<label>Select Tip %</label>
+				{error[1].message && <p className={classes.error_message}>{error[1].message}</p>}
+			</div>
 			<Card className={classes.card}>
 				{
 					tips.map((tip) => (
@@ -82,8 +117,11 @@ const UserInput = (props) => {
 					))
 				}
 			</Card>
+			<div className={classes.label_field}>
 			<label>Number of People</label>
-			<input id="numberOfPeople" type="text" onChange={onChangePeople} value={people} className={classes.input} />
+			{error[2].message && <p className={classes.error_message}>{error[2].message}</p>}
+			</div>
+			<input id="numberOfPeople" placeholder='0' type="text" onChange={onChangePeople} value={people} className={classes.input} />
 			<Button type="submit" className={classes.button}>Go</Button>
 		</form>
 	);
