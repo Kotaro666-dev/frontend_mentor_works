@@ -1,0 +1,9 @@
+@import '../../constants.css';
+
+.title {
+	text-align: center;
+}
+
+h1 {
+	letter-spacing: 1rem;
+}
